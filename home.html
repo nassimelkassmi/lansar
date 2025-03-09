@@ -11,10 +11,10 @@
         <div class="logo">
             <img src="assets/logoalansar.jpeg" alt="Al Ansar Logo">
         </div>
-        <h1>Welkom bij Al Ansar</h1>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">Over ons</a></li>
                 <li><a href="events.html">Evenementen</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -33,12 +33,12 @@
             </div>
         </section>
 
-        <!-- Overzicht sectie -->
+        <!-- Over ons preview -->
         <section class="about-preview">
             <img src="assets/lachap.jpeg" alt="Studenten in discussie">
             <div class="about-text">
                 <h2>Waarom Al Ansar?</h2>
-                <p>Bij Al Ansar draait alles om **gemeenschap, groei en educatie**. Sluit je aan bij onze bijeenkomsten en versterk je band met je geloof en medestudenten.</p>
+                <p>Bij Al Ansar draait alles om gemeenschap, groei en educatie. Sluit je aan bij onze bijeenkomsten en versterk je band met je geloof en medestudenten.</p>
                 <a href="about.html" class="btn">Lees meer over ons</a>
             </div>
         </section>
@@ -53,5 +53,11 @@
     <footer>
         <p>&copy; 2025 Al Ansar - Universiteit Antwerpen. Alle rechten voorbehouden.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector("nav ul").classList.toggle("show");
+        }
+    </script>
 </body>
 </html>

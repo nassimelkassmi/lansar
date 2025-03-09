@@ -11,30 +11,21 @@
         <div class="logo">
             <img src="assets/logoalansar.jpeg" alt="Al Ansar Logo">
         </div>
-
-        <script>
-            // Voeg de class 'active' toe aan de huidige pagina
-            document.querySelectorAll('nav a').forEach(link => {
-                if (link.href === window.location.href) {
-                    link.classList.add('active');
-                }
-            });
-        </script>
-        
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">Over ons</a></li>
+                <li><a href="about.html" class="active">Over ons</a></li>
                 <li><a href="events.html">Evenementen</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <section class="intro">
             <h2>Missie</h2>
-            <p>Onze missie is om de broeders en zusters van de Univseriteit van Antwerpen samen met elkaar te verbinden .Om leuke activiteiten te doen en om islamitische kennis op te doen</p>
+            <p>Onze missie is om broeders en zusters aan de Universiteit van Antwerpen met elkaar te verbinden. We organiseren leuke activiteiten en bieden islamitische kennis.</p>
             
             <h2>Visie</h2>
             <p>Wij streven naar een inclusieve en inspirerende gemeenschap waarin iedereen zich welkom voelt.</p>
@@ -49,5 +40,11 @@
     <footer>
         <p>&copy; 2025 Al Ansar - Universiteit Antwerpen</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector("nav ul").classList.toggle("show");
+        }
+    </script>
 </body>
 </html>

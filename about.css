@@ -1,3 +1,4 @@
+/* Algemene stijlen */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -10,23 +11,17 @@ body {
 header {
     background-color: #004d40;
     color: white;
+    padding: 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 /* Logo */
 .logo img {
-    width: 140px;
+    width: 120px;
     height: auto;
-}
-
-nav {
-    display: flex;
-    justify-content: center; /* Centraal uitlijnen van de navigatie-items */
-    width: 100%;
 }
 
 /* Navigatie */
@@ -35,7 +30,8 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 25px;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
@@ -46,29 +42,27 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
-    padding: 8px 15px;
-    transition: 0.3s;
+    padding: 10px 15px;
     border-radius: 5px;
+    transition: background 0.3s;
 }
 
 nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Actieve link stijl */
+/* Actieve link */
 nav a.active {
-    background-color: #ffffff;
-    color: #004d40; /* Of een andere kleur die je wilt voor de actieve pagina */
+    background-color: #ffcc00;
+    color: #333;
 }
 
-nav a[href="about.html"] {
-    background-color: #28a745; /* Groene kleur */
+/* Hamburger-menu */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
     color: white;
-}
-
-nav a[href="about.html"]:hover {
-    background-color: #218838; /* Donkere groene kleur bij hover */
 }
 
 /* Hoofdsectie */
@@ -125,4 +119,70 @@ footer {
     padding: 20px;
     margin-top: 40px;
     font-size: 0.9rem;
+}
+
+/* Mobiele weergave (max 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    /* Navigatie verbergen */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Hamburger-menu */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    /* Over ons-sectie aanpassen */
+    .intro {
+        padding: 20px;
+    }
+
+    /* Afbeeldingen stacken */
+    .images {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .images img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Desktop weergave (min 1024px) */
+@media (min-width: 1024px) {
+    header {
+        flex-direction: row;
+    }
+
+    nav ul {
+        display: flex !important;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
 }

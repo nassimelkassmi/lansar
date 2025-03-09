@@ -11,40 +11,38 @@
         <div class="logo">
             <img src="assets/logoalansar.jpeg" alt="Al Ansar Logo">
         </div>
-
-        <script>
-            // Voeg de class 'active' toe aan de huidige pagina
-            document.querySelectorAll('nav a').forEach(link => {
-                if (link.href === window.location.href) {
-                    link.classList.add('active');
-                }
-            });
-        </script>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">Over ons</a></li>
-                <li><a href="events.html">Evenementen</a></li>
+                <li><a href="events.html" class="active">Evenementen</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
+        <section class="events">
             <h2>Komende Evenementen</h2>
             <ul>
-                <li>📅 18 maart - Studiebijeenkomst en iftar</li>
+                <li>📅 17 maart - Studiebijeenkomst en iftar</li>
             </ul>
         </section>
 
         <section class="event-image">
-            <img src="assets/iftar.jpg" alt="Evenementen Afbeelding">
+            <img src="assets/iftar2.0.jpg" alt="Evenementen Afbeelding">
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Al Ansar - Universiteit Antwerpen</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector("nav ul").classList.toggle("show");
+        }
+    </script>
 </body>
 </html>

@@ -11,26 +11,27 @@
         <div class="logo">
             <img src="assets/logoalansar.jpeg" alt="Al Ansar Logo">
         </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">Over ons</a></li>
                 <li><a href="events.html">Evenementen</a></li>
-                <li><a href="contact.html">Contact</a></li>
-     
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
+        <section class="contact-info">
             <h2>Contacteer Ons via Instagram</h2>
-            <p>Voor vragen of meer informatie, stuur ons een bericht via Instagram: <a href="https://www.instagram.com/alansar.ua/" target="_blank">@alansarua</a></p>
+            <p>Voor vragen of meer informatie, stuur ons een bericht via Instagram:</p>
+            <p>📷 <a href="https://www.instagram.com/alansar.ua/" target="_blank">@alansarua</a></p>
         </section>
 
-        <section>
+        <section class="social-media">
             <h2>Social Media</h2>
-            <p>📧 E-mail: <a href="mailto:info@alansarua.be">info@alansarua.be</a></p>
+            <p>📧 E-mail: <a href="mailto:alansarua@hotmail.com">info@alansarua.be</a></p>
             <p>📍 Locatie: Universiteit Antwerpen</p>
         </section>
     </main>
@@ -38,6 +39,11 @@
     <footer>
         <p>&copy; 2025 Al Ansar - Universiteit Antwerpen</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector("nav ul").classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
-
