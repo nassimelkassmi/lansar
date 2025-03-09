@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over Ons - Al Ansar</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logoalansar.jpeg" alt="Al Ansar Logo">
+        </div>
+
+        <script>
+            // Voeg de class 'active' toe aan de huidige pagina
+            document.querySelectorAll('nav a').forEach(link => {
+                if (link.href === window.location.href) {
+                    link.classList.add('active');
+                }
+            });
+        </script>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Over ons</a></li>
+                <li><a href="events.html">Evenementen</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <h2>Missie</h2>
+            <p>Onze missie is om de broeders en zusters van de Univseriteit van Antwerpen samen met elkaar te verbinden .Om leuke activiteiten te doen en om islamitische kennis op te doen</p>
+            
+            <h2>Visie</h2>
+            <p>Wij streven naar een inclusieve en inspirerende gemeenschap waarin iedereen zich welkom voelt.</p>
+        </section>
+
+        <section class="images">
+            <img src="assets/gemeenschap.jpeg" alt="Studentenbijeenkomst">
+            <img src="assets/lecture.jpeg" alt="Lezing over islamitische cultuur">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Al Ansar - Universiteit Antwerpen</p>
+    </footer>
+</body>
+</html>
