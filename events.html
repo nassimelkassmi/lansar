@@ -23,6 +23,20 @@
     </header>
 
     <main>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                let video = document.querySelector("video");
+                video.muted = true;
+                video.play().catch(error => {
+                    console.log("Autoplay werd geblokkeerd: " + error);
+                });
+        
+                document.addEventListener("click", () => {
+                    video.play();
+                });
+            });
+        </script>
+        
         <section class="events">
             <h2>Evenementen</h2>
             <ul>
