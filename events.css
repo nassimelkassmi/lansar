@@ -126,6 +126,43 @@ footer {
     font-size: 0.9rem;
 }
 
+.event-images {
+    display: flex;
+    justify-content: center; /* Zorgt ervoor dat ze in het midden staan */
+    flex-wrap: wrap; /* Laat afbeeldingen op de volgende regel vallen als er geen ruimte is */
+    gap: 20px; /* Ruimte tussen afbeeldingen */
+    margin-top: 30px;
+}
+
+.event-images img {
+    width: calc(33.33% - 20px); /* Zorgt ervoor dat er max 3 per rij passen */
+    max-width: 300px; /* Beperkt de maximale breedte */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-images img:hover {
+    transform: scale(1.05);
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.video-container video {
+    width: 35%; /* Pas dit aan naar wens (bijv. 50%, 40%, etc.) */
+    max-width: 400px; /* Beperk de maximale breedte */
+    height: auto; /* Houd de verhouding correct */
+    border-radius: 10px; /* Optioneel: afgeronde hoeken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optioneel: schaduw voor een mooi effect */
+}
+
+
 /* Mobiele weergave (max 768px) */
 @media (max-width: 768px) {
     header {
@@ -170,6 +207,11 @@ footer {
         width: 100%;
         height: auto;
     }
+
+    .event-images img {
+        width: calc(50% - 20px); /* 2 afbeeldingen per rij op tablets */
+    }
+
 }
 
 /* Desktop weergave (min 1024px) */
